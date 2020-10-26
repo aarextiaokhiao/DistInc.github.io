@@ -1896,6 +1896,21 @@ table {
 	line-height: normal;
 }
 
+.btn.mv {
+	background: linear-gradient(90deg, #7f003f, transparent, #7f003f), linear-gradient(#ff7fbf, #ff007f);
+	box-shadow: 3px 4px 0px 0px #3f001f;
+	border: 1px solid #3f001f
+}
+
+.btn.mv:hover {
+	background: linear-gradient(90deg, #ff007f, transparent, #ff007f), linear-gradient(white, #ff7fbf);
+}
+
+.mvTxt {
+	color: #ffbfdf !important;
+	text-shadow: 2px 2px 2px #7f003f !important
+}
+
 @keyframes grosstxt {
 	0% {
 		color: #176648;

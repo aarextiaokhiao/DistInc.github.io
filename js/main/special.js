@@ -247,6 +247,20 @@ function loadTempFeatures() {
 			spec: [false, true, true],
 			superSpec: [false, true, true],
 		}),
+		multiverses: new Feature({
+			name: "multiverses",
+			req: function() { return DISTANCES.mlt },
+			res: "distance",
+			display: formatDistance,
+			reached: function() { return player.ended },
+			progress: function () {
+				if (player.options.featPerc=="logarithm") {
+					return player.distance.max(1).log10().div(ExpantaNum.log10(DISTANCES.mlt))
+				} else {
+					return player.distance.div(DISTANCES.mlt)
+				}
+			}
+		}),
 	};
 }
 

@@ -3,6 +3,6 @@ function futureCapped() {
 }
 
 function end1point9() {
-	showTab("v1.9End")
+	showTab("mv")
 	player.ended = true;
 }
