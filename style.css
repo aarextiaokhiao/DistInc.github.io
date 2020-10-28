@@ -1896,19 +1896,56 @@ table {
 	line-height: normal;
 }
 
+.band.mv {
+	background: rgba(0, 0, 0, 0.25)
+}
+
 .btn.mv {
+	background: #ff7fbf;
+	box-shadow: 3px 4px 0px 0px #7f003f;
+	border: 1px solid #7f003f;
+	color: black;
+	text-shadow: none
+}
+
+.btn.mv:hover {
+	background: #ffbfdf;
+}
+
+.btn.mvPres {
 	background: linear-gradient(90deg, #7f003f, transparent, #7f003f), linear-gradient(#ff7fbf, #ff007f);
 	box-shadow: 3px 4px 0px 0px #3f001f;
 	border: 1px solid #3f001f
 }
 
-.btn.mv:hover {
+.btn.mvPres:hover {
 	background: linear-gradient(90deg, #ff007f, transparent, #ff007f), linear-gradient(white, #ff7fbf);
 }
 
 .mvTxt {
 	color: #ffbfdf !important;
 	text-shadow: 2px 2px 2px #7f003f !important
+}
+
+.btn.sf {
+	background: linear-gradient(90deg, #ff7f7f, #7fff7f, #7f7fff);
+	box-shadow: 3px 4px 0px 0px rgba(255, 255, 255, 0.5);
+	border: 1px solid rgba(0, 0, 0, 0.75);
+	color: black;
+	text-shadow: none
+}
+
+.btn.sf:hover {
+	background: linear-gradient(90deg, #ffbfbf, #bfffbf, #bfbfff)
+}
+
+.mvMap table {
+	width: 100%
+}
+
+.mvMap td {
+	vertical-align: 0;
+	width: 20%
 }
 
 @keyframes grosstxt {

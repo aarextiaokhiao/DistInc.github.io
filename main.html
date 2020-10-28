@@ -8,7 +8,6 @@
 		<br><br><br><br>
 		<img src="images/game_icon.ico" style="width: 200px; height: 200px;"></img>
 		<span class="centered" style="color: white">Loading...<br><span style="font-size: 20px !important;"><a href="https://discord.gg/wwQfgPa" target="_blank">Help</a></span></span>
-		<span class="centered" style="color: white">Loading...<br><span style="font-size: 20px !important;"><a href="https://discord.gg/wwQfgPa" target="_blank">Help</a></span></span>
 	</div>
 	<div id="mainContainer" style="display: none">
 		<div class="band lb" style="min-height: 100px;">
@@ -75,7 +74,9 @@
 								Elementary
 							</button>
 						</td>
-						<td><button id="mvtabbtn" class="btn tb mv mvTxt main" onclick="showTab('mv')">Multiverses</button></td>
+						<td>
+							<button id="mvtabbtn" class="btn tb mvPres mvTxt main" onclick="showTab('mv')">Multiverses</button>
+						</td>
 					</tr>
 				</table><br>
 			</div>
@@ -2042,13 +2043,265 @@
 		</div>
 	</div>
 	<div id="mv" class="tab" style="display: none;">
-		<h1>You have reached the end of <b class="mvTxt">Multiverse</b>!</h1>
+		<div id="mvReached" style="display: none;">
+			<h1>You have reached the end of <b class="mvTxt">Multiverse</b>!</h1>
+			<br>
+			You have reached the barrier of the multiverse. To move on, you need to seek for Multiversal Energy and transcend to <b class="mvTxt">Multiversal Overseer</b>. 
+		</div>
+		<div id="mvInfo">
+			You have <b class="mvTxt" style="font-size: 24px">1</b> Multiversal Energy.
+			<br>
+			You are currently in <b class="mvTxt">Multiverse</b> &Rho;-541.
+			<br><br>
+			You have <b class="mvTxt" style="font-size: 24px">1</b> Overseer Cubes, which multiplies the Multiversal Energy gain by 1x.
+		</div>
 		<br>
-		You have reached the barrier of the multiverse. To move on, you need to seek for Multiversal Energy and transcend to <b class="mvTxt">Multiversal Overseer</b>. 
+		<button id="mvReset" class="btn mvPres" style="min-height: 150px;">Seek your multiverse for <b class="mvTxt">1</b> Multiversal Energy.</button>
 		<br><br>
-		<hr>
+		<div class="band mv">
+			<table>
+				<tr>
+					<td><button class="btn tb inf" style="visibility: hidden;"></button></td>
+				</tr>
+				<tr>
+					<td>
+						<button class="btn tb mv">Milestones</button>
+					</td>
+					<td>
+						<button class="btn tb mv">Multiverse Map</button>
+					</td>
+					<!--
+					<td>
+						<button class="btn tb mv">Absorption</button>
+					</td>
+					<td>
+						<button class="btn tb sf">Spectrum Flow</button>
+					</td>
+					-->
+				</tr>
+			</table>
+		</div>
 		<br>
-		<button id="mvReset" class="btn mv" style="min-height: 150px;">Seek your multiverse for <b class="mvTxt">1</b> Multiversal Energy.</button>
+		<div id="mvMilestones" style="display: none">
+			<button class="btn bought" style="width: 360px; max-width: 360px">
+				<h1>1 Overseer Cube</h1>
+				You automatically gain 100% of Elementaries per second and start with all Higgs upgrades unlocked.
+			</button><br>
+			<button class="btn locked" style="width: 360px; max-width: 360px">
+				<h1>2 Overseer Cubes</h1>
+				Theories and Hadronic Score don't reset on Multiverses.
+			</button><br>
+			<button class="btn locked" style="width: 360px; max-width: 360px">
+				<h1>3 Overseer Cubes</h1>
+				Keep all your Entropy upgrades that don't reset on Entropy.
+			</button><br>
+			<button class="btn locked" style="width: 360px; max-width: 360px">
+				<h1>4 Overseer Cubes</h1>
+				Unlock Auto-Field Upgrades.
+			</button><br>
+			<button class="btn locked" style="width: 360px; max-width: 360px">
+				<h1>5 Overseer Cubes</h1>
+				You automatically gain 10% of Skyrmions per second.
+			</button><br>
+			<button class="btn locked" style="width: 360px; max-width: 360px">
+				<h1>10 Overseer Cubes</h1>
+				Unlock Auto-Multiverse Map.
+			</button>
+		</div>
+		<div id="mvMap">
+			Note: The goal of a Multiverse is to reach 1 mlt distance.
+			<br><br>
+			Note 2: Completing makes the unlocks of your Multiverse permanent!
+			<br><br>
+			<table class="mvMap">
+				<tr>
+					<td>
+						<b>Multiverse</b>
+					</td>
+					<td>
+						<b>Nerfs</b>
+					</td>
+					<td>
+						<b>Unlocks</b>
+					</td>
+					<td>
+						<b>Status</b>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Rho;-541
+					</td>
+					<td>
+						None.
+					</td>
+					<td>
+						Unlock the Multiverses layer.
+					</td>
+					<td>
+						Completed! (+1 Overseer Cubes)
+					</td>
+					<td>
+						<button class="btn bought">Running</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Chi;-258
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						Incomplete
+					</td>
+					<td>
+						<button class="btn main">Enter</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Gamma;-83
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						Locked (requires 2 Multiversal Energy)
+					</td>
+					<td>
+						<button class="btn locked">Locked</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Sigma;-809
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						Locked (requires 3 Multiversal Energy)
+					</td>
+					<td>
+						<button class="btn locked">Locked</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Theta;-501
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						Locked (requires 5 Multiversal Energy)
+					</td>
+					<td>
+						<button class="btn locked">Locked</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Gamma;-47
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						Locked (requires 8 Multiversal Energy)
+					</td>
+					<td>
+						<button class="btn locked">Locked</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Omicron;-815
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						Locked (requires 13 Multiversal Energy)
+					</td>
+					<td>
+						<button class="btn locked">Locked</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Iota;-441
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						Locked (requires 21 Multiversal Energy)
+					</td>
+					<td>
+						<button class="btn locked">Locked</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Kappa;-772
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						Locked (requires 34 Multiversal Energy)
+					</td>
+					<td>
+						<button class="btn locked">Locked</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&Psi;-123
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						???
+					</td>
+					<td>
+						Locked (requires 55 Multiversal Energy)
+					</td>
+					<td>
+						<button class="btn locked">Locked</button>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 	
 	<!-- Links -->
